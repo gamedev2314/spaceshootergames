@@ -1,4 +1,3 @@
-/* Center everything inside the page */
 html, body {
   margin: 0;
   padding: 0;
@@ -6,7 +5,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black; /* or any background color you want */
+  background-color: black;
 }
 
 canvas {
