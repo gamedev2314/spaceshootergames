@@ -7,12 +7,25 @@ let gameOver = false;
 let retryButton;
 
 function setup() {
-  createCanvas(600, 400);
-  spaceship = new Spaceship();
-  retryButton = createButton('Retry');
-  retryButton.position(width / 2 - 30, height / 2 + 40);
-  retryButton.mousePressed(restartGame);
-  retryButton.hide();
+  let cnv;
+
+function setup() {
+  cnv = createCanvas(800, 600);  // Canvas size
+  centerCanvas();  // Center the canvas on the screen
+}
+
+// This function centers the canvas on the screen
+function centerCanvas() {
+  let x = (windowWidth - width) / 2;  // Centering horizontally
+  let y = (windowHeight - height) / 2; // Centering vertically
+  cnv.position(x, y);  // Set the canvas position
+}
+
+// Keep the canvas centered when the window is resized
+function windowResized() {
+  centerCanvas();
+}
+
 }
 
 function draw() {
